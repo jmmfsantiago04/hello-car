@@ -1,0 +1,17 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Consultation {
+  id             Int      @id @default(autoincrement())
+  name           String
+  phoneNumber    String
+  desiredCar     String
+  purchaseMethod String
+  createdAt      DateTime @default(now())
+}
