@@ -37,7 +37,7 @@ const QuickConsultationForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row items-center bg-white p-[2rem] rounded-lg shadow-lg max-w-full mx-auto" style={{ width: '87.5rem', height: '36.25rem' }}>
+    <div className="flex flex-row items-center  bg-blue-100 p-[2rem] rounded-lg shadow-lg max-w-full mx-auto" style={{ width: '87.5rem', height: '36.25rem' }}>
       <div className="flex justify-center items-center w-1/2 h-full">
         <img src="/silvercar.png" alt="Car" className="w-[47.375rem] h-[19.0625rem]" />
       </div>

@@ -66,4 +66,31 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Cards Styles*/
+
+.card-container {
+  @apply w-[320px] h-[440px] mx-auto bg-white shadow-lg rounded-lg overflow-hidden;
+}
+
+.card-content {
+  @apply flex flex-col items-center p-6 text-center;
+}
+
+.card-image-wrapper {
+  @apply inline-flex items-center justify-center w-[120px] h-[120px] bg-blue-100 rounded-full;
+}
+
+.card-heading {
+  @apply text-[28px] font-bold text-gray-800 mb-[24px];
+}
+
+.card-line {
+  @apply w-[56px] h-[5px] bg-blue-800 mb-[24px];
+}
+
+.card-paragraph {
+  @apply w-[276px] h-[96px] text-[14px] text-gray-600 mx-[22px];
+}
+
 }
