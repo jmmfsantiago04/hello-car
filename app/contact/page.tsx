@@ -1,13 +1,21 @@
-// pages/contact.tsx
-import React from 'react';
+"use client"
+import LockedBanner from "@/components/LockedBanner";
+import Footer from "@/components/Footer";
+import BannerFooter from "@/components/BannerFooter";
+import QuickConsultationForm from "@/components/QuickConsultationForm";
+import Navbar from "@/components/Navbar";
 
-const Contact: React.FC = () => {
+const ContactPage = () => {
   return (
-    <div>
-      <h1>Contact Us</h1>
-      {/* Contact form or information */}
-    </div>
+  <div className="bg-white">
+  <Navbar />
+<main className='flex-grow pb-24'> 
+  <QuickConsultationForm />
+    <BannerFooter/>
+    <Footer/>
+  </main>
+  <LockedBanner/>
+</div>
   );
 };
-
-export default Contact;
+export default ContactPage;

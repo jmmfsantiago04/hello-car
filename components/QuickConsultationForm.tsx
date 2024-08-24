@@ -37,61 +37,63 @@ const QuickConsultationForm: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row items-center  bg-blue-100 p-[2rem] rounded-lg shadow-lg max-w-full mx-auto" style={{ width: '87.5rem', height: '36.25rem' }}>
-      <div className="flex justify-center items-center w-1/2 h-full">
-        <img src="/silvercar.png" alt="Car" className="w-[47.375rem] h-[19.0625rem]" />
+    <div className="flex flex-col lg:flex-row items-center bg-white p-4 md:p-8 rounded-lg shadow-lg max-w-full mx-auto lg:h-[36.25rem]">
+      <div className="flex justify-center items-center w-full lg:w-1/2 h-full mb-4 lg:mb-0">
+        <img src="/silvercar.png" alt="Car" className="w-full max-w-lg h-auto" />
       </div>
-      <div className="w-1/2 h-full flex items-center justify-center">
+      <div className="w-full lg:w-1/2 h-full flex items-center justify-center">
         <div className="w-full max-w-md">
-          <div className="flex items-center mb-[1rem]">
-            <h2 className="font-bold" style={{ fontSize: '1.75rem' }}>빠른 상담 신청</h2>
-            <p className="text-gray-600 ml-[1rem]" style={{ fontSize: '1rem' }}>*담당자 배정후 빠르게 연락드리도록 하겠습니다.</p>
+          <div className="flex flex-col md:flex-row items-center mb-4">
+            <h2 className="font-bold text-lg md:text-xl lg:text-2xl">빠른 상담 신청</h2>
+            <p className="text-gray-600 ml-0 md:ml-4 mt-2 md:mt-0 text-sm md:text-base">
+              *담당자 배정후 빠르게 연락드리도록 하겠습니다.
+            </p>
           </div>
-          <form className="space-y-[1rem]" onSubmit={handleSubmit}>
-            <div className="flex items-center">
-              <label className="block text-sm font-medium text-gray-700 w-[6rem]">이름</label>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div className="flex flex-col md:flex-row items-center">
+              <label className="block text-sm font-medium text-gray-700 w-full md:w-[6rem]">이름</label>
               <input 
                 type="text" 
                 placeholder="이름을 입력해 주세요" 
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="mt-[0.25rem] block flex-1 px-[0.75rem] py-[0.5rem] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 md:mt-0 block flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
             </div>
-            <div className="flex items-center">
-              <label className="block text-sm font-medium text-gray-700 w-[6rem]">연락처</label>
+            <div className="flex flex-col md:flex-row items-center">
+              <label className="block text-sm font-medium text-gray-700 w-full md:w-[6rem]">연락처</label>
               <input 
                 type="text" 
                 value={phoneNumber}
                 onChange={handlePhoneNumberChange}
                 placeholder="010-5555-4444" 
-                className="mt-[0.25rem] block flex-1 px-[0.75rem] py-[0.5rem] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 md:mt-0 block flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                 maxLength={13}
               />
             </div>
-            <div className="flex items-center">
-              <label className="block text-sm font-medium text-gray-700 w-[6rem]">희망 차량</label>
+            <div className="flex flex-col md:flex-row items-center">
+              <label className="block text-sm font-medium text-gray-700 w-full md:w-[6rem]">희망 차량</label>
               <input 
                 type="text" 
                 placeholder="희망 차량을 입력해 주세요" 
                 value={desiredCar}
                 onChange={(e) => setDesiredCar(e.target.value)}
-                className="mt-[0.25rem] block flex-1 px-[0.75rem] py-[0.5rem] border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                className="mt-1 md:mt-0 block flex-1 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               />
             </div>
-            <div className="flex items-center">
-              <label className="block text-sm font-medium text-gray-700 w-[6rem]">구매 방법</label>
-              <div className="mt-[0.25rem] flex-1 flex space-x-[1rem]">
+            <div className="flex flex-col md:flex-row items-center">
+              <label className="block text-sm font-medium text-gray-700 w-full md:w-[6rem]">구매 방법</label>
+              <div className="mt-1 md:mt-0 flex-1 flex space-x-4">
                 <div className="flex items-center">
                   <input 
                     id="visit-purchase" 
                     name="purchase-method" 
                     type="radio" 
-                    className="focus:ring-indigo-500 h-[1rem] w-[1rem] text-indigo-600 border-gray-300" 
+                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" 
                     value="방문 구매"
                     onChange={(e) => setPurchaseMethod(e.target.value)}
                   />
-                  <label htmlFor="visit-purchase" className="ml-[0.5rem] block text-sm font-medium text-gray-700">
+                  <label htmlFor="visit-purchase" className="ml-2 block text-sm font-medium text-gray-700">
                     방문 구매
                   </label>
                 </div>
@@ -100,11 +102,11 @@ const QuickConsultationForm: React.FC = () => {
                     id="non-face-purchase" 
                     name="purchase-method" 
                     type="radio" 
-                    className="focus:ring-indigo-500 h-[1rem] w-[1rem] text-indigo-600 border-gray-300" 
+                    className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300" 
                     value="비대면 구매"
                     onChange={(e) => setPurchaseMethod(e.target.value)}
                   />
-                  <label htmlFor="non-face-purchase" className="ml-[0.5rem] block text-sm font-medium text-gray-700">
+                  <label htmlFor="non-face-purchase" className="ml-2 block text-sm font-medium text-gray-700">
                     비대면 구매
                   </label>
                 </div>
@@ -113,7 +115,7 @@ const QuickConsultationForm: React.FC = () => {
             <div>
               <button 
                 type="submit" 
-                className="w-full bg-gray-500 text-white py-[0.5rem] px-[1rem] rounded-md hover:bg-gray-600"
+                className="w-full bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600 transition"
               >
                 상담 신청
               </button>

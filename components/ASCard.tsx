@@ -6,16 +6,16 @@ const ASCard: React.FC = () => {
   return (
     <div className="card-container">
       <div className="card-content">
-        <div className="mb-[19px]">
+        <div className="mb-[1.19rem]">
           <div className="card-image-wrapper">
             <img
               src="/MaskG2.png" 
               alt="Checklist Icon"
-              className="w-[80px] h-[80px]"
+              className="w-[5rem] h-[5rem]"
             />
           </div>
         </div>
-        <h2 className="text-[28px] font-bold text-gray-800 mt-[44px] mb-[24px]"> {/* Updated margin top */}
+        <h2 className="text-[1.75rem] font-bold text-gray-800 mt-[2.75rem] mb-[1.5rem]">
           출고 후 A/S
         </h2>
         <div className="card-line"></div>

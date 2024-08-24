@@ -4,15 +4,9 @@ import Navbar from '../components/Navbar';
 import InfiniteCarousel from '../components/InfiniteCarousel';
 import QuickConsultationForm from '@/components/QuickConsultationForm';
 import LockedBanner from '@/components/LockedBanner';
-import Card from '@/components/Card';
-import ASCard from '@/components/ASCard';
-import FinanceCard from '@/components/FinanceCard';
-import CardsContainer from '@/components/BenefitsPage';
 import BenefitsPage from '@/components/BenefitsPage';
-import Reviews from '@/components/ReviewsPage';
 import ReviewsPage from '@/components/ReviewsPage';
 import Footer from '@/components/Footer';
-import BannerFooter from '@/components/BannerFooter';
 
 const HomePage: React.FC = () => {
   return (
@@ -34,7 +28,6 @@ const HomePage: React.FC = () => {
         <BenefitsPage />
         </div>
         <ReviewsPage/>
-        <BannerFooter/>
         <Footer/>
       </main>
       <LockedBanner/>

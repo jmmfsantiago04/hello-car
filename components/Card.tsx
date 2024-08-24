@@ -1,17 +1,15 @@
-// File: components/Card.tsx
-
 import React from 'react';
 
 const Card: React.FC = () => {
   return (
     <div className="card-container">
       <div className="card-content">
-        <div className="mb-[19px]">
+        <div className="mb-[1.1875rem]"> 
           <div className="card-image-wrapper">
             <img
-              src="/MaskG1.png" // Path to your image
+              src="/MaskG1.png" 
               alt="Car Check Icon"
-              className="w-[80px] h-[80px]"
+              className="w-[5rem] h-[5rem]" 
             />
           </div>
         </div>

@@ -1,5 +1,3 @@
-// /components/InfiniteCarousel.tsx
-
 import React, { useState, useEffect, useRef } from 'react';
 import Banner from './Banner';
 import Banner2 from './Banner2';
@@ -9,16 +7,15 @@ const InfiniteCarousel: React.FC = () => {
   const banners = [<Banner key="1" />, <Banner2 key="2" />];
   const length = banners.length;
 
-  // Duplicate banners for seamless looping
   const extendedBanners = [banners[length - 1], ...banners, banners[0]];
-  const transitionDuration = 2000; // in milliseconds
+  const transitionDuration = 2000;
 
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => prevIndex + 1);
-    }, 5000); // Slide every 5 seconds
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);

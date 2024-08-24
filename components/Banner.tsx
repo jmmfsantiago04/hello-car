@@ -1,6 +1,7 @@
 // /components/Banner.tsx
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner = () => {
   return (
@@ -23,11 +24,13 @@ const Banner = () => {
         <p className="text-[0.875rem] md:text-[1.125rem] lg:text-[1.25rem] mb-[6.25rem] md:mb-[4.5625rem]">
           파산/면책/회생/신용불량/한도 부족 ok
         </p>
-        <button 
-          className="bg-gray-600 text-white w-[25rem] md:w-[12.5rem] h-[2.5rem] md:h-[3rem] flex items-center justify-center hover:bg-gray-700"
-        >
-          상담 신청 하기
-        </button>
+        <Link href="/contact">
+          <button 
+            className="bg-gray-600 text-white w-[25rem] md:w-[12.5rem] h-[2.5rem] md:h-[3rem] flex items-center justify-center hover:bg-gray-700"
+          >
+            상담 신청 하기
+          </button>
+        </Link>
       </div>
     </div>
   );

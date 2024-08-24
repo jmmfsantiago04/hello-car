@@ -1,6 +1,7 @@
 // /components/Banner2.tsx
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Banner2 = () => {
   return (
@@ -23,16 +24,18 @@ const Banner2 = () => {
         <p className="text-[0.9375rem] mb-[1.25rem]">
           한도 부족 타사 거절돼도<br/>연체 중이 아니고 소득증빙 가능하면 ok
         </p>
-        <p className="text-[0.9375rem] mb-[4.625rem]">  {/* Updated margin-bottom to 74px */}
+        <p className="text-[0.9375rem] mb-[4.625rem]">
           개인회생 파산면책 인가 후 신용 회복은 회복 후 납부 1회 이상 즉시 가능
         </p>
       </div>
       <div className="absolute top-[30.4375rem] left-[7.5rem] right-[67.5rem]">
-        <button 
-          className="bg-gray-600 text-white w-[12.5rem] h-[3rem] flex items-center justify-center hover:bg-gray-700"
-        >
-          상담 신청 하기
-        </button>
+        <Link href="/contact">
+          <button 
+            className="bg-gray-600 text-white w-[12.5rem] h-[3rem] flex items-center justify-center hover:bg-gray-700"
+          >
+            상담 신청 하기
+          </button>
+        </Link>
       </div>
     </div>
   );

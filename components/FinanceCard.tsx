@@ -2,21 +2,20 @@
 
 import React from 'react';
 
-
 const FinanceCard: React.FC = () => {
   return (
     <div className="card-container">
       <div className="card-content">
-        <div className="mb-[19px]">
+        <div className="mb-[1.1875rem]">=
           <div className="card-image-wrapper">
             <img
               src="/MaskG3.png"
               alt="Finance Icon"
-              className="w-[80px] h-[80px]"
+              className="w-[5rem] h-[5rem]" 
             />
           </div>
         </div>
-        <h2 className="text-[28px] font-bold text-gray-800 mt-[44px] mb-[24px]">
+        <h2 className="text-[1.75rem] font-bold text-gray-800 mt-[2.75rem] mb-[1.5rem]"> 
           금융상품
         </h2>
         <div className="card-line"></div>

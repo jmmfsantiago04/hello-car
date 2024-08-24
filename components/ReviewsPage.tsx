@@ -63,9 +63,9 @@ const ReviewsPage = () => {
       <Head>
         <title>Customer Reviews</title>
       </Head>
-      <h1 className="text-[56px] font-bold text-gray-800 mb-4">저희 고객 후기</h1>
-      <h2 className="text-[52px] font-semibold text-blue-800 mb-2">평균 평점 4.8</h2>
-      <div className="border-b-4 border-blue-600 mx-auto my-8 w-[142px]"></div>
+      <h1 className="text-[3.5rem] font-bold text-gray-800 mb-4">저희 고객 후기</h1>
+      <h2 className="text-[3.25rem] font-semibold text-blue-800 mb-2">평균 평점 4.8</h2>
+      <div className="border-b-4 border-blue-600 mx-auto my-8 w-[8.875rem]"></div>
       <div className="relative w-full overflow-hidden">
         <div
           className="flex transition-transform duration-700 ease-in-out"
